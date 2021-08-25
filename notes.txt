@@ -1,0 +1,43 @@
+Steps of how blackjack is played:
+1. Players make their bets
+2. Players are dealt with 2 cards
+3. Dealt is dealt 2 cards where the second card is hidden from the players.
+
+OBJECTIVES OF THE GAME
+----------------------
+
+Have a higher total point than the dealer
+Anything over 21 is an automatic loss (bust)
+Aces can be worth 1 or 11; every other card is worth its face amount (worth 10 points)
+An ace and a face card is called a blackjack
+After each round options to the players are:
+-> Option to hit (receive more cards)
+-> Option to stay (no more cards)
+
+Hitting > 21: Automatic bust
+Hitting == 21: Automatic win
+
+After players hit/stay: 
+-> Dealer flips over his/her hidden card
+-> While dealer's total is greater than >= 17, dealer keeps hitting the cards
+
+If dealer busts -> any player who did not bust earlier wins his or her bet. 
+If the dealer does not bust -> Dealer's total is compared to each player's total.
+
+For any player who's total is greater than the dealer's total -> Player wins the amount that was placed
+For any player whose total is less than the dealer's he or she loses the money
+In the event of a tie -> No money is exchanged
+
+CODE PROCESS
+------------
+
+1. Import Libraries
+2. Creating a function that creates a new deck of cards
+3. Function that lists out all permutations of ace values
+4. Calculating the value of cards in our hand (including correct handling of aces)
+5. MAIN LOOP
+    -> For loop for iterating over 50000 stacks
+    -> While loop: for each stack of cards, plays blackjack until there are 20 or fewer cards in the stack. 
+       At that point it moves onto the next stack
+    -> Game results: 1 for win, 0 for a tie, -1 for a loss
+    
